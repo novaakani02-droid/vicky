@@ -1,26 +1,24 @@
 /* ==========================================================================
    A LETTER TO VICKY — LIGHT LUXURY EDITORIAL DESIGN SYSTEM
    Refined Colour Distribution:
-     Main background:           #F7F6F1 (Warm Cream)
-     Secondary background:      #FFFFFF (Crisp White)
-     Primary headings & Navy:   #003459 (Prussian Blue)
-     Body ink & Dark features:  #00171F (Midnight Ink)
-     Accent details:            #ADEBFF (Ice Blue)
+     Main and secondary background: #FFFFFF (White)
+     Primary and body text:         #800020 (Rich Burgundy)
+     Stationery accent:             #FFFCF1 (Ivory Cream)
    ========================================================================== */
 
 :root {
-  --bg-cream: #f7f6f1;
+  --bg-cream: #ffffff;
   --bg-white: #ffffff;
-  --navy-primary: #003459;
-  --ink-dark: #00171f;
-  --accent-light: #adebff;
+  --navy-primary: #800020;
+  --ink-dark: #800020;
+  --accent-light: #fffcf1;
 
   /* Refined editorial opacity tokens */
-  --ink-body: rgba(0, 23, 31, 0.86);
-  --ink-muted: rgba(0, 52, 89, 0.72);
-  --border-light: rgba(0, 52, 89, 0.12);
-  --border-medium: rgba(0, 52, 89, 0.22);
-  --border-dark-hairline: rgba(173, 235, 255, 0.2);
+  --ink-body: rgba(128, 0, 32, 0.86);
+  --ink-muted: rgba(128, 0, 32, 0.72);
+  --border-light: rgba(128, 0, 32, 0.12);
+  --border-medium: rgba(128, 0, 32, 0.22);
+  --border-dark-hairline: rgba(128, 0, 32, 0.2);
 
   /* Typography */
   --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
@@ -31,10 +29,10 @@
   --radius-photo: 20px;
   --radius-stationery: 18px;
   --radius-button: 10px;
-  --shadow-photo: 0 20px 44px -12px rgba(0, 23, 31, 0.14),
-    0 4px 12px -2px rgba(0, 52, 89, 0.08);
-  --shadow-stationery: 0 24px 60px -16px rgba(0, 23, 31, 0.1),
-    0 4px 16px -4px rgba(0, 52, 89, 0.06);
+  --shadow-photo: 0 20px 44px -12px rgba(128, 0, 32, 0.14),
+    0 4px 12px -2px rgba(128, 0, 32, 0.08);
+  --shadow-stationery: 0 24px 60px -16px rgba(128, 0, 32, 0.1),
+    0 4px 16px -4px rgba(128, 0, 32, 0.06);
 
   /* Spacing & Motion */
   --header-height: 64px;
@@ -103,7 +101,7 @@ button:focus-visible {
 }
 
 .section-padded {
-  padding-block: 4.75rem;
+  padding-block: 3.5rem;
 }
 
 .section-kicker {
@@ -126,7 +124,7 @@ button:focus-visible {
 }
 
 /* ==========================================================================
-   1. OPENING EXPERIENCE — COMPACT ROUNDED PRUSSIAN ENVELOPE ON CREAM
+   1. OPENING EXPERIENCE — COMPACT ROUNDED BURGUNDY ENVELOPE ON WHITE
    ========================================================================== */
 
 .envelope-stage {
@@ -156,8 +154,8 @@ button:focus-visible {
   pointer-events: none;
   background: radial-gradient(
     ellipse 62% 52% at 50% 50%,
-    rgba(173, 235, 255, 0.24) 0%,
-    rgba(247, 246, 241, 0) 72%
+    rgba(128, 0, 32, 0.1) 0%,
+    rgba(255, 255, 255, 0) 72%
   );
 }
 
@@ -206,8 +204,8 @@ button:focus-visible {
   aspect-ratio: 1.44 / 1;
   transform-style: preserve-3d;
   border-radius: var(--radius-envelope);
-  box-shadow: 0 24px 48px -12px rgba(0, 23, 31, 0.28),
-    0 8px 20px -6px rgba(0, 52, 89, 0.22);
+  box-shadow: 0 24px 48px -12px rgba(43, 0, 11, 0.28),
+    0 8px 20px -6px rgba(128, 0, 32, 0.22);
   transition: transform 720ms var(--ease-out-expo),
     box-shadow 650ms ease;
 }
@@ -216,7 +214,7 @@ button:focus-visible {
   position: absolute;
   inset: 0;
   border-radius: var(--radius-envelope);
-  background: linear-gradient(160deg, #002a48 0%, #002038 100%);
+  background: linear-gradient(160deg, #9b1238 0%, #650019 100%);
   z-index: 1;
 }
 
@@ -240,21 +238,21 @@ button:focus-visible {
 
 .envelope-pocket-left {
   z-index: 4;
-  background: linear-gradient(115deg, #003459 0%, #002b4b 100%);
+  background: linear-gradient(115deg, #8b0025 0%, #70001d 100%);
   clip-path: polygon(0 0, 52% 52%, 0 100%);
 }
 
 .envelope-pocket-right {
   z-index: 4;
-  background: linear-gradient(245deg, #003459 0%, #002947 100%);
+  background: linear-gradient(245deg, #8b0025 0%, #69001b 100%);
   clip-path: polygon(100% 0, 48% 52%, 100% 100%);
 }
 
 .envelope-pocket-bottom {
   z-index: 5;
-  background: linear-gradient(180deg, #003b66 0%, #003459 48%, #002b4a 100%);
+  background: linear-gradient(180deg, #a3143a 0%, #800020 48%, #68001a 100%);
   clip-path: polygon(0 100%, 50% 45%, 100% 100%);
-  filter: drop-shadow(0 -2px 6px rgba(0, 14, 24, 0.32));
+  filter: drop-shadow(0 -2px 6px rgba(43, 0, 11, 0.32));
 }
 
 /* Top 3D Rotating Flap with matching top rounded edge */
@@ -291,11 +289,11 @@ button:focus-visible {
 }
 
 .envelope-flap-shape {
-  background: linear-gradient(180deg, #003e6b 0%, #003459 70%, #002c4d 100%);
-  box-shadow: inset 0 1px 0 rgba(173, 235, 255, 0.25);
+  background: linear-gradient(180deg, #a3143a 0%, #800020 70%, #68001a 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 252, 241, 0.25);
 }
 
-/* Subtle linen paper weave texture on Prussian blue stock */
+/* Subtle linen paper weave texture on burgundy stock */
 .envelope-flap-shape::after,
 .envelope-pocket-bottom::after {
   content: '';
@@ -304,8 +302,8 @@ button:focus-visible {
   opacity: 0.07;
   background-image: repeating-linear-gradient(
       45deg,
-      rgba(173, 235, 255, 0.3) 0,
-      rgba(173, 235, 255, 0.3) 1px,
+      rgba(255, 252, 241, 0.3) 0,
+      rgba(255, 252, 241, 0.3) 1px,
       transparent 1px,
       transparent 5px
     ),
@@ -323,7 +321,7 @@ button:focus-visible {
 }
 
 .envelope-flap-shape-back {
-  background: linear-gradient(180deg, #002138 0%, #002e50 100%);
+  background: linear-gradient(180deg, #650019 0%, #800020 100%);
 }
 
 /* Proportionate Refined Embossed "V" Seal */
@@ -342,14 +340,14 @@ button:focus-visible {
   place-items: center;
   background: radial-gradient(
     circle at 34% 28%,
-    #004d82 0%,
-    #003459 58%,
-    #001f36 100%
+    #a3143a 0%,
+    #800020 58%,
+    #650019 100%
   );
-  box-shadow: 0 8px 18px rgba(0, 12, 22, 0.55),
-    0 0 0 1px rgba(173, 235, 255, 0.45),
-    inset 0 2px 4px rgba(173, 235, 255, 0.28),
-    inset 0 -2px 5px rgba(0, 12, 22, 0.8);
+  box-shadow: 0 8px 18px rgba(43, 0, 11, 0.4),
+    0 0 0 1px rgba(255, 252, 241, 0.45),
+    inset 0 2px 4px rgba(255, 252, 241, 0.28),
+    inset 0 -2px 5px rgba(43, 0, 11, 0.6);
   transition: transform 240ms var(--ease-out-expo),
     box-shadow 240ms var(--ease-out-expo),
     opacity 280ms ease;
@@ -357,11 +355,11 @@ button:focus-visible {
 
 .envelope-seal:hover {
   transform: translate(-50%, -50%) translateZ(14px) scale(1.06);
-  box-shadow: 0 12px 24px rgba(0, 12, 22, 0.6),
-    0 0 0 1px rgba(173, 235, 255, 0.72),
-    0 0 18px rgba(173, 235, 255, 0.22),
-    inset 0 2px 5px rgba(173, 235, 255, 0.35),
-    inset 0 -2px 5px rgba(0, 12, 22, 0.8);
+  box-shadow: 0 12px 24px rgba(43, 0, 11, 0.5),
+    0 0 0 1px rgba(255, 252, 241, 0.72),
+    0 0 18px rgba(255, 252, 241, 0.22),
+    inset 0 2px 5px rgba(255, 252, 241, 0.35),
+    inset 0 -2px 5px rgba(43, 0, 11, 0.6);
 }
 
 .envelope-seal:active {
@@ -372,7 +370,7 @@ button:focus-visible {
   position: absolute;
   inset: 5px;
   border-radius: 50%;
-  border: 1px solid rgba(173, 235, 255, 0.34);
+  border: 1px solid rgba(255, 252, 241, 0.34);
   pointer-events: none;
 }
 
@@ -380,7 +378,7 @@ button:focus-visible {
   position: absolute;
   inset: 9px;
   border-radius: 50%;
-  border: 1px dashed rgba(173, 235, 255, 0.2);
+  border: 1px dashed rgba(255, 252, 241, 0.2);
   pointer-events: none;
 }
 
@@ -390,12 +388,12 @@ button:focus-visible {
   font-weight: 600;
   line-height: 1;
   color: var(--accent-light);
-  text-shadow: 0 1px 1px rgba(0, 10, 18, 0.85),
+  text-shadow: 0 1px 1px rgba(43, 0, 11, 0.85),
     0 -1px 0 rgba(255, 255, 255, 0.25);
 }
 
 /* ==========================================================================
-   SCRIPTURE REVEAL — WARM CREAM / WHITE STATIONERY WITH DEEP BLUE INK
+   SCRIPTURE REVEAL — WHITE STATIONERY WITH BURGUNDY INK
    ========================================================================== */
 
 .envelope-letter {
@@ -405,10 +403,10 @@ button:focus-visible {
   bottom: 7%;
   height: 82%;
   z-index: 3;
-  background: linear-gradient(175deg, #ffffff 0%, #f7f6f1 100%);
-  border: 1px solid rgba(0, 52, 89, 0.16);
+  background: #ffffff;
+  border: 1px solid rgba(128, 0, 32, 0.16);
   border-radius: var(--radius-stationery);
-  box-shadow: 0 12px 30px rgba(0, 23, 31, 0.18);
+  box-shadow: 0 12px 30px rgba(43, 0, 11, 0.18);
   transform: translateY(0) scale(0.95);
   opacity: 0;
   transition: transform 780ms var(--ease-out-expo),
@@ -429,7 +427,7 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 1px solid rgba(0, 52, 89, 0.1);
+  border: 1px solid rgba(128, 0, 32, 0.1);
   border-radius: 12px;
   margin: 0.55rem;
   opacity: 0;
@@ -446,8 +444,8 @@ button:focus-visible {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 52, 89, 0.26);
-  background-color: rgba(173, 235, 255, 0.22);
+  border: 1px solid rgba(128, 0, 32, 0.26);
+  background-color: rgba(128, 0, 32, 0.06);
   display: inline-grid;
   place-items: center;
   margin-bottom: 1.2rem;
@@ -490,7 +488,7 @@ button:focus-visible {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: pointer;
-  box-shadow: 0 8px 20px -6px rgba(0, 52, 89, 0.38);
+  box-shadow: 0 8px 20px -6px rgba(128, 0, 32, 0.28);
   transition: background-color 180ms ease,
     border-color 180ms ease,
     transform 180ms var(--ease-out-expo);
@@ -533,7 +531,7 @@ button:focus-visible {
 
 .envelope-stage.is-revealed .envelope {
   transform: translateY(36px);
-  box-shadow: 0 12px 26px rgba(0, 23, 31, 0.12);
+  box-shadow: 0 12px 26px rgba(43, 0, 11, 0.12);
 }
 
 .envelope-stage.is-revealed .envelope-back,
@@ -554,10 +552,10 @@ button:focus-visible {
   height: auto;
   min-height: 330px;
   transform: translate(-50%, -50%) scale(1);
-  background: linear-gradient(172deg, #ffffff 0%, #f7f6f1 100%);
-  border: 1px solid rgba(0, 52, 89, 0.18);
-  box-shadow: 0 32px 72px -18px rgba(0, 23, 31, 0.22),
-    0 0 0 1px rgba(173, 235, 255, 0.35);
+  background: #ffffff;
+  border: 1px solid rgba(128, 0, 32, 0.18);
+  box-shadow: 0 32px 72px -18px rgba(43, 0, 11, 0.22),
+    0 0 0 1px rgba(128, 0, 32, 0.08);
 }
 
 .envelope-stage.is-revealed .envelope-letter-inner {
@@ -590,7 +588,7 @@ button:focus-visible {
 }
 
 /* ==========================================================================
-   2. PERSISTENT NAVIGATION BAR (LIGHT CREAM TRANSLUCENT)
+   2. PERSISTENT NAVIGATION BAR (WHITE TRANSLUCENT)
    ========================================================================== */
 
 .site-header {
@@ -599,7 +597,7 @@ button:focus-visible {
   left: 0;
   right: 0;
   z-index: 900;
-  background-color: rgba(247, 246, 241, 0.9);
+  background-color: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-light);
@@ -720,7 +718,7 @@ button:focus-visible {
 .mobile-nav {
   background-color: var(--bg-white);
   border-bottom: 1px solid var(--border-light);
-  box-shadow: 0 18px 36px -14px rgba(0, 23, 31, 0.14);
+  box-shadow: 0 18px 36px -14px rgba(43, 0, 11, 0.14);
 }
 
 .mobile-nav[hidden] {
@@ -768,7 +766,7 @@ button:focus-visible {
   width: 100%;
   overflow: hidden;
   border-radius: var(--radius-photo);
-  background: linear-gradient(155deg, #ffffff 0%, #eceae1 100%);
+  background: linear-gradient(155deg, #ffffff 0%, #fffcf1 100%);
   box-shadow: var(--shadow-photo);
 }
 
@@ -796,9 +794,9 @@ button:focus-visible {
   padding: 1.5rem;
   text-align: center;
   border-radius: 14px;
-  border: 1px dashed rgba(0, 52, 89, 0.24);
+  border: 1px dashed rgba(128, 0, 32, 0.24);
   margin: 0.75rem;
-  background: rgba(247, 246, 241, 0.6);
+  background: rgba(255, 252, 241, 0.6);
 }
 
 .photo-slot.is-missing .photo-fallback {
@@ -813,8 +811,8 @@ button:focus-visible {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 52, 89, 0.25);
-  background-color: rgba(173, 235, 255, 0.28);
+  border: 1px solid rgba(128, 0, 32, 0.25);
+  background-color: rgba(128, 0, 32, 0.06);
   display: grid;
   place-items: center;
   margin-bottom: 0.2rem;
@@ -850,11 +848,11 @@ button:focus-visible {
   display: flex;
   align-items: center;
   padding-top: calc(var(--header-height) + 3.25rem);
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   background: radial-gradient(
       ellipse 68% 58% at 78% 36%,
-      rgba(173, 235, 255, 0.22) 0%,
-      rgba(247, 246, 241, 0) 68%
+      rgba(128, 0, 32, 0.06) 0%,
+      rgba(255, 255, 255, 0) 68%
     ),
     var(--bg-cream);
   border-bottom: 1px solid var(--border-light);
@@ -914,7 +912,7 @@ button:focus-visible {
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  box-shadow: 0 10px 24px -8px rgba(0, 52, 89, 0.36);
+  box-shadow: 0 10px 24px -8px rgba(128, 0, 32, 0.28);
   transition: background-color 180ms ease,
     border-color 180ms ease,
     transform 180ms var(--ease-out-expo);
@@ -928,7 +926,7 @@ button:focus-visible {
 
 .hero-media {
   width: 100%;
-  max-width: 390px;
+  max-width: 430px;
   margin-inline: auto;
 }
 
@@ -945,21 +943,29 @@ button:focus-visible {
   border-bottom: 1px solid var(--border-light);
 }
 
+.story-section.section-padded {
+  padding-top: 2rem;
+}
+
 .story-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
-  align-items: center;
+  align-items: start;
 }
 
 .story-media {
-  max-width: 360px;
+  max-width: 400px;
   width: 100%;
   margin-inline: auto;
 }
 
 .editorial-frame-portrait .photo-slot {
   aspect-ratio: 4 / 5;
+}
+
+.editorial-frame-portrait .photo-slot img {
+  object-position: center top;
 }
 
 .prose-stack {
@@ -988,7 +994,7 @@ button:focus-visible {
 }
 
 /* ==========================================================================
-   6. A LETTER FROM DAD — WHITE STATIONERY ON WARM CREAM
+   6. A LETTER FROM DAD — WHITE STATIONERY
    ========================================================================== */
 
 .letter-section {
@@ -1012,7 +1018,7 @@ button:focus-visible {
 }
 
 .stationery-border {
-  border: 1px solid rgba(0, 52, 89, 0.1);
+  border: 1px solid rgba(128, 0, 32, 0.1);
   border-radius: 12px;
   padding: 2.15rem 1.35rem;
 }
@@ -1036,8 +1042,8 @@ button:focus-visible {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 52, 89, 0.24);
-  background-color: rgba(173, 235, 255, 0.24);
+  border: 1px solid rgba(128, 0, 32, 0.24);
+  background-color: rgba(128, 0, 32, 0.06);
   display: inline-grid;
   place-items: center;
 }
@@ -1097,15 +1103,15 @@ button:focus-visible {
 }
 
 /* ==========================================================================
-   7. HER JOURNEY — DARK FEATURE SECTION (#00171F) FOR EDITORIAL CONTRAST
+   7. HER JOURNEY — WHITE EDITORIAL SECTION WITH BURGUNDY INK
    ========================================================================== */
 
 .journey-section {
   position: relative;
-  padding-block: 5.75rem;
+  padding-block: 4.25rem;
   overflow: hidden;
-  background-color: var(--ink-dark);
-  color: var(--bg-white);
+  background-color: var(--bg-white);
+  color: var(--ink-dark);
 }
 
 .journey-backdrop {
@@ -1118,7 +1124,7 @@ button:focus-visible {
   height: 100%;
   border-radius: 0;
   box-shadow: none;
-  background: var(--ink-dark);
+  background: var(--bg-white);
 }
 
 .journey-backdrop .photo-slot-cover img {
@@ -1130,9 +1136,9 @@ button:focus-visible {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(0, 23, 31, 0.92) 0%,
-    rgba(0, 23, 31, 0.8) 54%,
-    rgba(0, 23, 31, 0.64) 100%
+    rgba(255, 255, 255, 0.94) 0%,
+    rgba(255, 255, 255, 0.88) 54%,
+    rgba(255, 255, 255, 0.78) 100%
   );
 }
 
@@ -1142,11 +1148,11 @@ button:focus-visible {
 }
 
 .journey-section .section-kicker {
-  color: var(--accent-light);
+  color: var(--navy-primary);
 }
 
 .journey-heading {
-  color: var(--bg-white);
+  color: var(--navy-primary);
 }
 
 .journey-split {
@@ -1160,7 +1166,7 @@ button:focus-visible {
   margin-top: 1.45rem;
   font-size: 1.05rem;
   line-height: 1.78;
-  color: rgba(255, 255, 255, 0.86);
+  color: var(--ink-body);
   max-width: 48ch;
 }
 
@@ -1181,13 +1187,13 @@ button:focus-visible {
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 500;
-  color: var(--accent-light);
+  color: var(--navy-primary);
 }
 
 .pillar-row dd {
   font-size: 0.95rem;
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--ink-body);
 }
 
 .journey-visual {
@@ -1203,11 +1209,11 @@ button:focus-visible {
 }
 
 .journey-section .figure-caption {
-  color: rgba(173, 235, 255, 0.8);
+  color: var(--ink-muted);
 }
 
 /* ==========================================================================
-   8. MEMORIES — WARM CREAM PHOTOGRAPHIC COLLAGE WITH ROUNDED FRAMES
+   8. MEMORIES — WHITE PHOTOGRAPHIC COLLAGE WITH ROUNDED FRAMES
    ========================================================================== */
 
 .memories-section {
@@ -1259,20 +1265,24 @@ button:focus-visible {
   aspect-ratio: 4 / 3;
 }
 
+.memory-card-wide .photo-slot img {
+  object-position: center top;
+}
+
 .memory-trigger:hover .photo-slot img {
   transform: scale(1.03);
 }
 
 /* ==========================================================================
-   9. FINAL MESSAGE — DEEP BLUE CLOSING HORIZON (#00171F) & FOOTER
+   9. FINAL MESSAGE — BURGUNDY CLOSING SECTION & FOOTER
    ========================================================================== */
 
 .final-section {
   position: relative;
-  padding-block: 6.5rem;
+  padding-block: 5rem;
   overflow: hidden;
   text-align: center;
-  background-color: var(--ink-dark);
+  background-color: var(--navy-primary);
   color: var(--bg-white);
 }
 
@@ -1286,7 +1296,7 @@ button:focus-visible {
   height: 100%;
   border-radius: 0;
   box-shadow: none;
-  background: var(--ink-dark);
+  background: var(--navy-primary);
 }
 
 .final-scrim {
@@ -1294,9 +1304,9 @@ button:focus-visible {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(0, 23, 31, 0.88) 0%,
-    rgba(0, 23, 31, 0.72) 48%,
-    rgba(0, 23, 31, 0.94) 100%
+    rgba(128, 0, 32, 0.92) 0%,
+    rgba(128, 0, 32, 0.86) 48%,
+    rgba(128, 0, 32, 0.94) 100%
   );
 }
 
@@ -1308,7 +1318,7 @@ button:focus-visible {
 }
 
 .final-section .section-kicker {
-  color: var(--accent-light);
+  color: var(--bg-white);
 }
 
 .final-heading {
@@ -1327,22 +1337,22 @@ button:focus-visible {
   gap: 1.3rem;
   font-size: clamp(1rem, 1.9vw, 1.1rem);
   line-height: 1.85;
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .final-emphasis {
   font-family: var(--font-display);
   font-style: italic;
   font-size: clamp(1.5rem, 3vw, 1.95rem);
-  color: var(--accent-light);
+  color: var(--bg-white);
   padding-block: 0.35rem;
 }
 
 .final-signature {
   margin-top: 2.35rem;
   padding-top: 1.65rem;
-  border-top: 1px solid var(--border-dark-hairline);
-  color: rgba(255, 255, 255, 0.86);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .final-dad {
@@ -1350,7 +1360,7 @@ button:focus-visible {
   font-family: var(--font-display);
   font-style: italic;
   font-size: 2rem;
-  color: var(--accent-light);
+  color: var(--bg-white);
 }
 
 .btn-return {
@@ -1364,23 +1374,23 @@ button:focus-visible {
   font-size: 0.82rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent-light);
-  border: 1px solid rgba(173, 235, 255, 0.34);
-  background: rgba(0, 52, 89, 0.45);
+  color: var(--navy-primary);
+  border: 1px solid var(--border-medium);
+  background: var(--bg-white);
   border-radius: var(--radius-button);
   transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
 .btn-return:hover {
   background: var(--navy-primary);
-  border-color: var(--accent-light);
+  border-color: var(--navy-primary);
   color: var(--bg-white);
 }
 
 /* Footer */
 .site-footer {
-  background-color: var(--ink-dark);
-  border-top: 1px solid rgba(173, 235, 255, 0.14);
+  background-color: var(--navy-primary);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   padding-block: 2.15rem;
 }
 
@@ -1403,7 +1413,7 @@ button:focus-visible {
   font-size: 0.76rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent-light);
+  color: rgba(255, 255, 255, 0.82);
 }
 
 /* ==========================================================================
@@ -1427,7 +1437,7 @@ button:focus-visible {
 .lightbox-backdrop {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 23, 31, 0.9);
+  background-color: rgba(43, 0, 11, 0.9);
   backdrop-filter: blur(8px);
 }
 
@@ -1450,13 +1460,13 @@ button:focus-visible {
   place-items: center;
   background: var(--navy-primary);
   color: var(--bg-white);
-  border: 1px solid rgba(173, 235, 255, 0.35);
+  border: 1px solid rgba(255, 252, 241, 0.35);
   border-radius: var(--radius-button);
   cursor: pointer;
 }
 
 .lightbox-close:hover {
-  border-color: var(--accent-light);
+  border-color: var(--bg-white);
 }
 
 .lightbox-figure {
@@ -1478,7 +1488,7 @@ button:focus-visible {
   font-family: var(--font-display);
   font-style: italic;
   font-size: 1.15rem;
-  color: var(--accent-light);
+  color: var(--bg-white);
 }
 
 /* ==========================================================================
@@ -1551,7 +1561,7 @@ button:focus-visible {
   }
 
   .section-padded {
-    padding-block: 6.5rem;
+    padding-block: 4.75rem;
   }
 
   .desktop-nav {
@@ -1565,27 +1575,50 @@ button:focus-visible {
 
   .hero-section {
     padding-top: calc(var(--header-height) + 4.25rem);
-    padding-bottom: 5.75rem;
+    padding-bottom: 2rem;
   }
 
   .hero-grid {
-    grid-template-columns: 1.12fr 0.88fr;
-    gap: 4.5rem;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 3rem;
   }
 
   .hero-media {
-    max-width: 390px;
+    max-width: 430px;
     margin-inline: 0;
     justify-self: end;
   }
 
   .story-grid {
-    grid-template-columns: 0.85fr 1.15fr;
-    gap: 4.75rem;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 3.75rem;
   }
 
   .story-media {
     margin-inline: 0;
+    max-width: 420px;
+    align-self: stretch;
+    display: flex;
+  }
+
+  .story-section.section-padded {
+    padding-top: 2rem;
+  }
+
+  .story-media .editorial-frame-portrait {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .story-media .editorial-frame-portrait .photo-slot {
+    flex: 1;
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+
+  .story-media .editorial-frame-portrait .photo-slot img {
+    object-position: center top;
   }
 
   .stationery-border {
@@ -1593,7 +1626,7 @@ button:focus-visible {
   }
 
   .journey-section {
-    padding-block: 7.25rem;
+    padding-block: 5.5rem;
   }
 
   .journey-split {
@@ -1656,7 +1689,7 @@ button:focus-visible {
   }
 
   .final-section {
-    padding-block: 8.25rem;
+    padding-block: 6.5rem;
   }
 }
 
