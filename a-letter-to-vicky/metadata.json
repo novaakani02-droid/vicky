@@ -1,0 +1,6 @@
+{
+  "name": "A Letter to Vicky",
+  "description": "A cinematic digital appreciation keepsake and personal letter from Dad to his daughter Vicky.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

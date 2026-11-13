@@ -1,0 +1,44 @@
+A LETTER TO VICKY — PHOTOGRAPH PLACEMENT GUIDE
+==============================================
+
+Place your real photographs of Vicky inside this `images/` folder using the
+exact filenames below. The website will automatically display them in their
+frames without needing to edit any code.
+
+Required / Recommended Photograph Filenames:
+
+1. vicky-hero.jpg
+   Where it appears: Hero section ("To My Beautiful Daughter, Vicky.")
+   Recommended aspect: Vertical / portrait orientation (e.g., 3:4 or 4:5)
+
+2. vicky-portrait-1.jpg
+   Where it appears: "Her Story" section ("A Beautiful Story Still Unfolding.")
+   Recommended aspect: Vertical / portrait orientation (3:4)
+
+3. vicky-portrait-2.jpg
+   Where it appears: "Memories" editorial collage (second featured portrait)
+   Recommended aspect: Vertical or square orientation
+
+4. vicky-memory-1.jpg
+   Where it appears: "Memories" collage — Large primary frame
+   Recommended aspect: Landscape or square (4:3 or 1:1)
+
+5. vicky-memory-2.jpg
+   Where it appears: "Memories" collage — Tall frame
+   Recommended aspect: Portrait (3:4)
+
+6. vicky-memory-3.jpg
+   Where it appears: "Memories" collage — Wide frame
+   Recommended aspect: Landscape (16:9 or 3:2)
+
+7. vicky-memory-4.jpg
+   Where it appears: "Memories" collage — Closing frame
+   Recommended aspect: Landscape or square (4:3)
+
+Included Aviation & Sky Photographs (already present, optional to replace):
+- aviation-sky.jpg     (Her Journey backdrop)
+- aviation-wing.jpg    (Her Journey wing above clouds)
+- aviation-horizon.jpg (Final Message closing horizon)
+
+Tip: Standard .jpg or .jpeg files work immediately. If you prefer .png or .webp,
+you can either save them as .jpg or update the filename in index.html.

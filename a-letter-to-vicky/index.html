@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Letter to Vicky — With Love From Dad</title>
+    <meta
+      name="description"
+      content="A cinematic digital appreciation keepsake and personal letter from Dad to his daughter Vicky."
+    />
+    <meta property="og:title" content="A Letter to Vicky — With Love From Dad" />
+    <meta
+      property="og:description"
+      content="A cinematic digital appreciation keepsake and personal letter from Dad to his daughter Vicky."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#F7F6F1" />
+
+    <!-- Editorial Typography: Cormorant Garamond (Display & Letter) + Plus Jakarta Sans (Body & UI) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="is-locked">
+    <!-- =========================================================
+         OPENING EXPERIENCE — THE 3D ENVELOPE
+         ========================================================= -->
+    <section
+      id="envelope-stage"
+      class="envelope-stage"
+      aria-label="Opening letter envelope"
+    >
+      <div class="envelope-ambient" aria-hidden="true"></div>
+
+      <div class="envelope-stage-inner">
+        <p class="envelope-invitation">A little something from Dad, just for you.</p>
+
+        <!-- 3D Envelope Assembly -->
+        <div class="envelope-scene" id="envelope-scene">
+          <div class="envelope" id="envelope">
+            <!-- Interior back wall of envelope -->
+            <div class="envelope-back" aria-hidden="true"></div>
+
+            <!-- Emerging Letter (initially tucked inside pocket, unfolds on open) -->
+            <article
+              class="envelope-letter"
+              id="envelope-letter"
+              aria-live="polite"
+              aria-label="Scripture card"
+            >
+              <div class="envelope-letter-inner">
+                <span class="letter-monogram" aria-hidden="true">V</span>
+
+                <blockquote class="scripture-quote">
+                  “In everything give thanks; for this is the will of God in Christ Jesus for you.”
+                </blockquote>
+
+                <p class="scripture-reference">
+                  1 Thessalonians 5:18 — New King James Version (NKJV)
+                </p>
+
+                <button
+                  type="button"
+                  id="continue-btn"
+                  class="btn-discover"
+                  tabindex="-1"
+                >
+                  <span>Discover Your Letter</span>
+                  <svg
+                    class="btn-arrow"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </article>
+
+            <!-- Front folded pocket clipped to 20px rounded silhouette -->
+            <div class="envelope-pocket-shell" aria-hidden="true">
+              <div class="envelope-pocket-left"></div>
+              <div class="envelope-pocket-right"></div>
+              <div class="envelope-pocket-bottom"></div>
+            </div>
+
+            <!-- Top 3D rotating flap -->
+            <div class="envelope-flap" id="envelope-flap" aria-hidden="true">
+              <div class="envelope-flap-front">
+                <div class="envelope-flap-shape"></div>
+              </div>
+              <div class="envelope-flap-back">
+                <div class="envelope-flap-shape-back"></div>
+              </div>
+            </div>
+
+            <!-- Engraved "V" Seal Trigger -->
+            <button
+              type="button"
+              id="envelope-seal"
+              class="envelope-seal"
+              aria-label="Open your letter from Dad"
+            >
+              <span class="seal-ring-outer" aria-hidden="true"></span>
+              <span class="seal-ring-inner" aria-hidden="true"></span>
+              <span class="seal-letter" aria-hidden="true">V</span>
+            </button>
+          </div>
+        </div>
+
+        <button type="button" id="envelope-prompt" class="envelope-prompt">
+          Tap to open your letter
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PERSISTENT NAVIGATION BAR (Revealed after envelope opens)
+         ========================================================= -->
+    <header id="site-header" class="site-header" aria-label="Primary navigation">
+      <div class="header-inner">
+        <a href="#home" class="brand-wordmark">To Vicky</a>
+
+        <nav class="desktop-nav" aria-label="Letter sections">
+          <a href="#home" class="nav-link is-active">Home</a>
+          <a href="#her-story" class="nav-link">Her Story</a>
+          <a href="#letter" class="nav-link">A Letter From Dad</a>
+          <a href="#her-journey" class="nav-link">Her Journey</a>
+          <a href="#memories" class="nav-link">Memories</a>
+          <a href="#final-message" class="nav-link">A Final Message</a>
+        </nav>
+
+        <button
+          type="button"
+          id="menu-toggle"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Open navigation menu"
+        >
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile sections" hidden>
+        <div class="mobile-nav-inner">
+          <a href="#home" class="mobile-nav-link">Home</a>
+          <a href="#her-story" class="mobile-nav-link">Her Story</a>
+          <a href="#letter" class="mobile-nav-link">A Letter From Dad</a>
+          <a href="#her-journey" class="mobile-nav-link">Her Journey</a>
+          <a href="#memories" class="mobile-nav-link">Memories</a>
+          <a href="#final-message" class="mobile-nav-link">A Final Message</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- =========================================================
+         MAIN CONTINUOUS SCROLLING KEEPSAKE
+         ========================================================= -->
+    <main id="main-content" class="main-content">
+      <!-- 1. HERO SECTION — MEET VICKY -->
+      <section id="home" class="hero-section" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="section-kicker">To My Beautiful Daughter, Vicky</p>
+            <h1 id="hero-title" class="hero-title">
+              For the girl who was always meant to fly.
+            </h1>
+            <p class="hero-lead">
+              Some of life’s greatest blessings come in the form of people who
+              make our journey more beautiful. Today, I celebrate one of mine.
+            </p>
+            <p class="hero-signature">With love, always. — Dad</p>
+
+            <div class="hero-actions">
+              <a href="#letter" class="btn-primary">
+                <span>Read Dad’s Letter</span>
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <figure class="editorial-frame editorial-frame-hero">
+              <div class="photo-slot" data-photo-slot>
+                <img
+                  src="images/vicky-hero.jpg"
+                  alt="Portrait of Vicky in natural light"
+                  loading="eager"
+                />
+                <div class="photo-fallback" aria-hidden="true">
+                  <span class="fallback-monogram">V</span>
+                  <span class="fallback-title">Vicky’s Editorial Portrait</span>
+                  <span class="fallback-hint">images/vicky-hero.jpg</span>
+                </div>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. HER STORY — A BEAUTIFUL INTRODUCTION -->
+      <section id="her-story" class="story-section section-padded" aria-labelledby="story-title">
+        <div class="container story-grid">
+          <div class="story-media reveal-on-scroll">
+            <figure class="editorial-frame editorial-frame-portrait">
+              <div class="photo-slot" data-photo-slot>
+                <img
+                  src="images/vicky-portrait-1.jpg"
+                  alt="Vicky smiling warmly"
+                  loading="lazy"
+                />
+                <div class="photo-fallback" aria-hidden="true">
+                  <span class="fallback-monogram">V</span>
+                  <span class="fallback-title">Portrait of Vicky</span>
+                  <span class="fallback-hint">images/vicky-portrait-1.jpg</span>
+                </div>
+              </div>
+              <figcaption class="figure-caption">
+                Strength, grace, and quiet determination
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="story-body reveal-on-scroll">
+            <p class="section-kicker">01 · Her Story</p>
+            <h2 id="story-title" class="section-heading">
+              A Beautiful Story Still Unfolding.
+            </h2>
+
+            <div class="prose-stack">
+              <p>
+                There is something remarkable about a young woman who dares to
+                dream beyond the familiar. Vicky is writing her own story, one
+                filled with courage, determination and the quiet strength to
+                keep moving forward.
+              </p>
+              <p>
+                Every step she takes carries the warmth of her character —
+                steadfast in her values, gracious in how she treats those around
+                her, and fearless in her pursuit of a calling that asks for both
+                discipline and heart.
+              </p>
+              <p>
+                Far from home, studying and training toward her dream of
+                becoming a pilot, she continues to show what resilience looks
+                like in motion. Today, she is pursuing a future that will take
+                her to incredible heights — and those who love her couldn’t be
+                prouder.
+              </p>
+            </div>
+
+            <blockquote class="editorial-pullquote">
+              “No matter how far life takes you, how high you fly or how much
+              the world changes, you will always have a father who loves you,
+              believes in you and is grateful to call you his daughter.”
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. A LETTER FROM DAD -->
+      <section id="letter" class="letter-section section-padded" aria-labelledby="letter-title">
+        <div class="container">
+          <div class="letter-header reveal-on-scroll">
+            <p class="section-kicker">02 · A Letter From Dad</p>
+            <h2 id="letter-title" class="section-heading">Words Kept for Always</h2>
+          </div>
+
+          <article class="stationery-sheet reveal-on-scroll">
+            <div class="stationery-border">
+              <div class="stationery-top">
+                <span class="stationery-crest" aria-hidden="true">V</span>
+                <span class="stationery-meta">Personal Correspondence · From Dad to Vic</span>
+              </div>
+
+              <div class="letter-prose">
+                <p class="letter-salutation">My Dear Daughter,</p>
+
+                <p class="letter-dropcap">
+                  If there is one thing I hope you never forget, it is that you
+                  are loved, deeply and unconditionally.
+                </p>
+
+                <p>
+                  Life has a beautiful way of bringing people into our lives and
+                  giving us reasons to be grateful. I may not have been there
+                  from the very beginning of your story, but I am grateful
+                  beyond words that I have had the privilege of being part of
+                  it. Somewhere along the way, you became more than someone I
+                  was responsible for. You became my daughter, and that is a
+                  place you will always hold in my heart.
+                </p>
+
+                <p>
+                  Today, as you pursue your dreams and work towards becoming the
+                  pilot you aspire to be, I want you to know just how proud I am
+                  of you.
+                </p>
+
+                <p>
+                  The journey may not always be easy. There will be long days,
+                  difficult moments and challenges that test your strength. But
+                  I hope you never lose sight of the beautiful future you are
+                  working towards.
+                </p>
+
+                <p>
+                  Even when the distance between us feels great, remember that
+                  you are never alone. My thoughts, prayers and love go with you
+                  wherever life takes you.
+                </p>
+
+                <p>
+                  As Scripture reminds us in 1 Thessalonians 5:18, we should
+                  give thanks in all circumstances. Today, I am thankful for
+                  you, for the bond we share and for the beautiful person you
+                  continue to become.
+                </p>
+
+                <p>
+                  Keep reaching for the skies, my daughter. May God guide your
+                  steps, protect your journey and grant you the grace to fulfil
+                  every beautiful dream in your heart.
+                </p>
+
+                <p>
+                  No matter how high you fly or how far life takes you, never
+                  forget that you will always have a home in my heart.
+                </p>
+
+                <div class="letter-closing">
+                  <p>With all my love,</p>
+                  <p class="letter-signoff">Dad.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 4. HER JOURNEY — REACHING FOR THE SKIES -->
+      <section id="her-journey" class="journey-section" aria-labelledby="journey-title">
+        <div class="journey-backdrop">
+          <div class="photo-slot photo-slot-cover" data-photo-slot>
+            <img
+              src="images/aviation-sky.jpg"
+              alt="High-altitude horizon above serene deep-blue clouds at dawn"
+              loading="lazy"
+            />
+            <div class="photo-fallback" aria-hidden="true"></div>
+          </div>
+          <div class="journey-scrim" aria-hidden="true"></div>
+        </div>
+
+        <div class="container journey-content">
+          <div class="journey-split">
+            <div class="journey-copy reveal-on-scroll">
+              <p class="section-kicker">03 · Her Journey</p>
+              <h2 id="journey-title" class="section-heading journey-heading">
+                Your Dreams Have No Ceiling.
+              </h2>
+              <p class="journey-lead">
+                From the dreams you carry today to the heights you will reach
+                tomorrow, may you never stop believing in everything you are
+                capable of becoming.
+              </p>
+
+              <dl class="journey-pillars">
+                <div class="pillar-row">
+                  <dt>Courage in Flight</dt>
+                  <dd>
+                    Every hour of study and every quiet mile abroad is shaping
+                    the steady hands of the pilot you are becoming.
+                  </dd>
+                </div>
+                <div class="pillar-row">
+                  <dt>Guided by Faith</dt>
+                  <dd>
+                    Held in constant prayer — for safe skies, clear horizons,
+                    and peace across every time zone.
+                  </dd>
+                </div>
+                <div class="pillar-row">
+                  <dt>Always Anchored</dt>
+                  <dd>
+                    Wherever your wings carry you across the world, my love and
+                    pride travel right beside you.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="journey-visual reveal-on-scroll">
+              <figure class="editorial-frame editorial-frame-wing">
+                <div class="photo-slot photo-slot-wing" data-photo-slot>
+                  <img
+                    src="images/aviation-wing.jpg"
+                    alt="Aircraft wing soaring above sunlit clouds against a deep blue sky"
+                    loading="lazy"
+                  />
+                  <div class="photo-fallback" aria-hidden="true">
+                    <span class="fallback-title">Above the Clouds</span>
+                    <span class="fallback-hint">images/aviation-wing.jpg</span>
+                  </div>
+                </div>
+                <figcaption class="figure-caption">
+                  Clear skies ahead, Vic
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. MEMORIES — PHOTOGRAPHIC COLLAGE -->
+      <section id="memories" class="memories-section section-padded" aria-labelledby="memories-title">
+        <div class="container">
+          <div class="memories-header reveal-on-scroll">
+            <div>
+              <p class="section-kicker">04 · Memories</p>
+              <h2 id="memories-title" class="section-heading">
+                Moments Held Close.
+              </h2>
+            </div>
+            <p class="memories-subtitle">
+              A quiet collection of portraits and cherished moments — a reminder
+              of how much joy you bring into our lives.
+            </p>
+          </div>
+
+          <div class="memories-collage">
+            <!-- Memory 1: Featured Large -->
+            <figure class="memory-card memory-card-feature reveal-on-scroll">
+              <button
+                type="button"
+                class="memory-trigger"
+                data-lightbox-src="images/vicky-memory-1.jpg"
+                data-lightbox-caption="Cherished moments — Vicky"
+                aria-label="View photograph: Cherished moments"
+              >
+                <div class="photo-slot" data-photo-slot>
+                  <img
+                    src="images/vicky-memory-1.jpg"
+                    alt="Vicky memory photograph one"
+                    loading="lazy"
+                  />
+                  <div class="photo-fallback" aria-hidden="true">
+                    <span class="fallback-monogram">01</span>
+                    <span class="fallback-title">Featured Memory</span>
+                    <span class="fallback-hint">images/vicky-memory-1.jpg</span>
+                  </div>
+                </div>
+              </button>
+              <figcaption class="figure-caption">I · Cherished Moments</figcaption>
+            </figure>
+
+            <!-- Memory 2: Tall Portrait -->
+            <figure class="memory-card memory-card-tall reveal-on-scroll">
+              <button
+                type="button"
+                class="memory-trigger"
+                data-lightbox-src="images/vicky-memory-2.jpg"
+                data-lightbox-caption="Grace and warmth — Vic"
+                aria-label="View photograph: Grace and warmth"
+              >
+                <div class="photo-slot" data-photo-slot>
+                  <img
+                    src="images/vicky-memory-2.jpg"
+                    alt="Vicky memory photograph two"
+                    loading="lazy"
+                  />
+                  <div class="photo-fallback" aria-hidden="true">
+                    <span class="fallback-monogram">02</span>
+                    <span class="fallback-title">Memory Portrait</span>
+                    <span class="fallback-hint">images/vicky-memory-2.jpg</span>
+                  </div>
+                </div>
+              </button>
+              <figcaption class="figure-caption">II · Grace &amp; Warmth</figcaption>
+            </figure>
+
+            <!-- Memory 3: Second Portrait -->
+            <figure class="memory-card memory-card-medium reveal-on-scroll">
+              <button
+                type="button"
+                class="memory-trigger"
+                data-lightbox-src="images/vicky-portrait-2.jpg"
+                data-lightbox-caption="Always smiling — Vicky"
+                aria-label="View photograph: Always smiling"
+              >
+                <div class="photo-slot" data-photo-slot>
+                  <img
+                    src="images/vicky-portrait-2.jpg"
+                    alt="Portrait of Vicky smiling"
+                    loading="lazy"
+                  />
+                  <div class="photo-fallback" aria-hidden="true">
+                    <span class="fallback-monogram">03</span>
+                    <span class="fallback-title">Portrait II</span>
+                    <span class="fallback-hint">images/vicky-portrait-2.jpg</span>
+                  </div>
+                </div>
+              </button>
+              <figcaption class="figure-caption">III · Light &amp; Joy</figcaption>
+            </figure>
+
+            <!-- Memory 4: Wide Landscape -->
+            <figure class="memory-card memory-card-wide reveal-on-scroll">
+              <button
+                type="button"
+                class="memory-trigger"
+                data-lightbox-src="images/vicky-memory-3.jpg"
+                data-lightbox-caption="Along the journey — Vic"
+                aria-label="View photograph: Along the journey"
+              >
+                <div class="photo-slot" data-photo-slot>
+                  <img
+                    src="images/vicky-memory-3.jpg"
+                    alt="Vicky memory photograph three"
+                    loading="lazy"
+                  />
+                  <div class="photo-fallback" aria-hidden="true">
+                    <span class="fallback-monogram">04</span>
+                    <span class="fallback-title">Along the Journey</span>
+                    <span class="fallback-hint">images/vicky-memory-3.jpg</span>
+                  </div>
+                </div>
+              </button>
+              <figcaption class="figure-caption">IV · Along the Journey</figcaption>
+            </figure>
+
+            <!-- Memory 5: Closing Memory -->
+            <figure class="memory-card memory-card-square reveal-on-scroll">
+              <button
+                type="button"
+                class="memory-trigger"
+                data-lightbox-src="images/vicky-memory-4.jpg"
+                data-lightbox-caption="Forever grateful — Dad"
+                aria-label="View photograph: Forever grateful"
+              >
+                <div class="photo-slot" data-photo-slot>
+                  <img
+                    src="images/vicky-memory-4.jpg"
+                    alt="Vicky memory photograph four"
+                    loading="lazy"
+                  />
+                  <div class="photo-fallback" aria-hidden="true">
+                    <span class="fallback-monogram">05</span>
+                    <span class="fallback-title">Forever Grateful</span>
+                    <span class="fallback-hint">images/vicky-memory-4.jpg</span>
+                  </div>
+                </div>
+              </button>
+              <figcaption class="figure-caption">V · Forever Grateful</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. FINAL MESSAGE -->
+      <section
+        id="final-message"
+        class="final-section"
+        aria-labelledby="final-title"
+      >
+        <div class="final-backdrop">
+          <div class="photo-slot photo-slot-cover" data-photo-slot>
+            <img
+              src="images/aviation-horizon.jpg"
+              alt="Aircraft ascending gracefully into a vast deep blue horizon sky"
+              loading="lazy"
+            />
+            <div class="photo-fallback" aria-hidden="true"></div>
+          </div>
+          <div class="final-scrim" aria-hidden="true"></div>
+        </div>
+
+        <div class="container final-content reveal-on-scroll">
+          <p class="section-kicker">05 · A Final Message</p>
+          <h2 id="final-title" class="final-heading">
+            Wherever Your Wings Take You…
+          </h2>
+
+          <div class="final-prose">
+            <p>
+              Keep dreaming, keep growing and keep becoming everything you were
+              created to be.
+            </p>
+            <p>
+              The skies may be wide, the journey may be long and the world may
+              take you far, but one thing will never change.
+            </p>
+            <p class="final-emphasis">You will always be my daughter.</p>
+            <p>
+              I am proud of you. I believe in you. And I thank God for you.
+            </p>
+          </div>
+
+          <div class="final-signature">
+            <p>With all my love, always.</p>
+            <p class="final-dad">Dad.</p>
+          </div>
+
+          <a href="#home" class="btn-return">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+            <span>Return to the Beginning</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-note">Made with love, from Dad to Vicky.</p>
+        <p class="footer-scripture">1 Thessalonians 5:18 (NKJV)</p>
+      </div>
+    </footer>
+
+    <!-- =========================================================
+         FULLSCREEN LIGHTBOX FOR MEMORIES
+         ========================================================= -->
+    <div
+      id="lightbox"
+      class="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Photograph viewer"
+      hidden
+    >
+      <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+      <div class="lightbox-dialog">
+        <button
+          type="button"
+          id="lightbox-close"
+          class="lightbox-close"
+          aria-label="Close photograph viewer"
+        >
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
+        <figure class="lightbox-figure">
+          <img id="lightbox-img" src="" alt="" />
+          <figcaption id="lightbox-caption" class="lightbox-caption"></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <script defer src="js/script.js"></script>
+  </body>
+</html>
