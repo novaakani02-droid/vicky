@@ -18,3 +18,11 @@ View your app in AI Studio: https://ai.studio/apps/c00b458e-e726-4c6c-bbda-dad7c
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Deploy to GitHub Pages
+
+The repository-root GitHub Actions workflow builds this folder and deploys the
+site to GitHub Pages when you push changes to `a-letter-to-vicky` on the `main`
+or `master` branch. In the repository settings, open **Pages** and set the
+build and deployment source to **GitHub Actions**. You can also start a
+deployment manually from the **Actions** tab.
